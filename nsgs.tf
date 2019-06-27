@@ -110,3 +110,4 @@ resource "azurerm_network_security_rule" "AllowRDP" {
     source_port_range = "*"
     source_address_prefix = "*"
 }
+
