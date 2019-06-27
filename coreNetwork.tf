@@ -15,7 +15,7 @@ resource "azurerm_public_ip" "azurerm_public_ip"{
 
 resource "azurerm_virtual_network" "azurerm_virtual_network"{
     name = "core"
-    location = "${azurerm_resource_group.core.loc}"
+    location = "${azurerm_resource_group.core.location}"
     resource_group_name = "${azurerm_resource_group.core.name}"
     address_space = ["10.0.0.0/16"]
     dns_servers = ["1.1.1.1", "1.0.0.1"]
