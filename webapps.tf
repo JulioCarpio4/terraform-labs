@@ -38,3 +38,8 @@ resource "azurerm_app_service" "citadel" {
   app_service_plan_id = "${element(azurerm_app_service_plan.free.*.id, count.index)}"
 }
 
+//Se pueden usar variables de ambiente, con el prefijo TF_VAR_<variable>
+output "webapps_ids" {
+  description = "ids of the web apps provisoned"
+  value = "${azurerm_app_service.citadel.*.id}"
+}
